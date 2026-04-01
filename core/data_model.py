@@ -35,3 +35,12 @@ class JobDetailsDataModel(BaseModel):
     salary :str = Field(default="Not available")
     url : HttpUrl
     
+    
+class ScorerDataModel(BaseModel):
+    job_details: JobDetailsDataModel
+    score: float
+    reasoning: str
+    resume_tips: list[str] | None = None
+    cover_letter: str | None = None
+    
+    
