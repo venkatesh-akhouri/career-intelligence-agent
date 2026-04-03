@@ -1,12 +1,7 @@
 from langchain.tools import tool
 from jobspy import scrape_jobs
 from core.data_model import JobDetailsDataModel
-from dotenv import load_dotenv
-import os
 
-
-load_dotenv()
-GROQ_API_KEY=os.getenv('GROQ_API_KEY')
 
 
 SITE_NAMES=["indeed", "linkedin", "zip_recruiter", "google" , "glassdoor", "bayt", "naukri", "bdjobs"]
