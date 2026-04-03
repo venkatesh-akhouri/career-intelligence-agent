@@ -31,7 +31,7 @@ class JobDetailsDataModel(BaseModel):
     location : str
     job_type : str
     description : str
-    requirements : list[str]
+    requirements : list[str] | None=None
     salary :str = Field(default="Not available")
     url : HttpUrl
     
