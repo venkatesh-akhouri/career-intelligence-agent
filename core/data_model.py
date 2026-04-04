@@ -31,13 +31,13 @@ class JobDetailsDataModel(BaseModel):
     location : str
     job_type : str
     description : str
-    requirements : list[str] | None=None
     salary :str = Field(default="Not available")
     url : HttpUrl
     
     
 class ScorerDataModel(BaseModel):
     job_details: JobDetailsDataModel
+    required_skills: list[str] | None=None
     score: float
     reasoning: str
     resume_tips: list[str] | None = None
